@@ -1,11 +1,15 @@
 import { motion } from "framer-motion";
-import "../styles/hero.css"; // Import the CSS file for smooth animations
+import '../styles/Hero.css';
 
 const Hero = () => {
+  const handleScroll = () => {
+    document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <section className="hero-section h-screen flex items-center justify-center text-white">
+    <section className="hero-section h-screen flex items-center justify-center text-white relative">
       <motion.div
-        className="text-center px-4"
+        className="text-center px-4 relative z-10"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -20,6 +24,7 @@ const Hero = () => {
           className="mt-6 px-6 py-3 bg-[#D35400] text-black rounded-lg font-medium hover:bg-[#A04000] transition-all duration-300 shadow-lg"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
+          onClick={handleScroll}
         >
           View More
         </motion.button>
