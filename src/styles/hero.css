@@ -1,0 +1,22 @@
+@keyframes cinematicGradient {
+  0% {
+    background: linear-gradient(135deg, #d35400, #2c2c2c, #4f4f4f);
+  }
+  25% {
+    background: linear-gradient(135deg, #a04000, #1c1c1c, #3f3f3f);
+  }
+  50% {
+    background: linear-gradient(135deg, #ff6f00, #000000, #2e2e2e);
+  }
+  75% {
+    background: linear-gradient(135deg, #e65c00, #202020, #444444);
+  }
+  100% {
+    background: linear-gradient(135deg, #d35400, #2c2c2c, #4f4f4f);
+  }
+}
+
+.hero-section {
+  animation: cinematicGradient 12s infinite alternate ease-in-out;
+  transition: background 2s ease-in-out;
+}
