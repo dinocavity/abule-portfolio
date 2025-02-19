@@ -1,22 +1,27 @@
-@keyframes cinematicGradient {
-  0% {
-    background: linear-gradient(135deg, #d35400, #2c2c2c, #4f4f4f);
-  }
-  25% {
-    background: linear-gradient(135deg, #a04000, #1c1c1c, #3f3f3f);
-  }
-  50% {
-    background: linear-gradient(135deg, #ff6f00, #000000, #2e2e2e);
-  }
-  75% {
-    background: linear-gradient(135deg, #e65c00, #202020, #444444);
-  }
-  100% {
-    background: linear-gradient(135deg, #d35400, #2c2c2c, #4f4f4f);
-  }
+.hero-section {
+  position: relative;
+  overflow: hidden;
 }
 
-.hero-section {
-  animation: cinematicGradient 12s infinite alternate ease-in-out;
-  transition: background 2s ease-in-out;
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, #d35400, #2c2c2c, #4f4f4f, #d35400);
+  animation: spinBg 20s linear infinite;
+  z-index: -1;
+  filter: blur(80px); /* Adds smooth blur */
+  opacity: 0.9; /* Adjust visibility to blend better */
+}
+
+@keyframes spinBg {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

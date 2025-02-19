@@ -1,10 +1,14 @@
 import Hero from "./components/Hero";
+import AboutMe from "./components/AboutMe";
+import BackToTop from "./components/BackToTop";
 
 function App() {
   return (
-    <div>
+    <>
       <Hero />
-    </div>
+      <AboutMe />
+      <BackToTop />
+    </>
   );
 }
 
