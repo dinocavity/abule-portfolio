@@ -7,7 +7,7 @@
   content: "";
   position: absolute;
   top: -50%;
-  left: -50%;
+  left: -49%;
   width: 200%;
   height: 200%;
   background: conic-gradient(from 0deg, #d35400, #2c2c2c, #4f4f4f, #d35400);
