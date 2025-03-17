@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import '../styles/Hero.css';
+import '../styles/hero.css';
 
 const Hero = () => {
   const handleScroll = () => {
